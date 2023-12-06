@@ -72,7 +72,7 @@ app.get('/api/shorturl/:short_url', async function (req, res) {
         return res.json({error: "invalid url"});
     }
 
-    res.redirect(already.original_url)
+    res.redirect(already.original_url);
 });
 
 app.listen(port, function () {
