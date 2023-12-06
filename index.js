@@ -75,6 +75,10 @@ app.get('/api/shorturl/:short_url', async function (req, res) {
     res.redirect(already.original_url);
 });
 
+app.get("*", (req, res) => {
+    res.send("Not Found!");
+});
+
 app.listen(port, function () {
     console.log(`Listening on port ${port}`);
 });
